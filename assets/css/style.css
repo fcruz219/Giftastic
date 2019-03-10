@@ -1,0 +1,35 @@
+body {
+    background: url(wallpaper.jpg);
+}
+
+h1 {
+    font-family: 'Black Han Sans', sans-serif;
+    background: rgb(255, 255, 255, 0.4);
+    text-align: center;
+    margin-left:25%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    }
+
+#inputform {
+    background: rgb(255, 255, 255, 0.4);
+    font-family: 'Black Han Sans', sans-serif;
+    padding:15px;
+    max-height: 200px;
+    float: right;
+}
+
+#images {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        background: rgb(255, 255, 255, 0.4);
+    }
+    .gif{
+        margin-right: 10px;
+    }
+
+    p{
+        font-family: 'Black Han Sans', sans-serif;
+    }

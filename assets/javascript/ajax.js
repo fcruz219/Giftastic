@@ -2,6 +2,7 @@ var myData = ["Ace Ventura", "It's Always Sunny In Philadelphia", "Dumb and Dumb
 "Silicon Valley", "Superbad", "Anchorman", "Billy Madison", "Eric Andre"]
 
 $(document).ready(function(){
+    $("#images").hide();
     renderButton();
     function renderButton(){
         $("#buttons").empty();
@@ -32,11 +33,12 @@ $(document).ready(function(){
 
 
 $(document).on("click", ".itembutton", displayInfo);
-
 function displayInfo() {
     var itemName = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=food+" + itemName + "&rating=g&limit=10&api_key=VN2gTSbvqkCHuWEkunZhZyKoVYYxm6mk";
     $("#images").empty();
+    $("#images").show()
+
 
     $.ajax ({
         url: queryURL,
