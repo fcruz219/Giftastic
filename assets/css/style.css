@@ -18,6 +18,7 @@ h1 {
     padding:15px;
     max-height: 200px;
     float: right;
+    border: 2px solid black;
 }
 
 #images {

@@ -1,12 +1,19 @@
+
+// INTIAL BUTTON -------------------
 var myData = ["Ace Ventura", "It's Always Sunny In Philadelphia", "Dumb and Dumber", "Step Brothers", "Bob's Burgers", 
 "Silicon Valley", "Superbad", "Anchorman", "Billy Madison", "Eric Andre"]
 
+
+// START DOCUMENT------------------
 $(document).ready(function(){
     $("#images").hide();
     renderButton();
+
+    // Function to make the buttons
     function renderButton(){
         $("#buttons").empty();
 
+        // Runs through my array
         for (var i=0; i< myData.length; i++) {
             var newButton = $("<button>");
             newButton.addClass("itembutton");
@@ -17,7 +24,7 @@ $(document).ready(function(){
         }
     }
 
-
+    // Adds the new button to the page
     $("#addbutton").on("click", function(event){
         event.preventDefault();
         var addedData = $("#userinput").val().trim();
@@ -35,7 +42,7 @@ $(document).ready(function(){
 $(document).on("click", ".itembutton", displayInfo);
 function displayInfo() {
     var itemName = $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=food+" + itemName + "&rating=g&limit=10&api_key=VN2gTSbvqkCHuWEkunZhZyKoVYYxm6mk";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + itemName + "&rating=g&limit=10&api_key=VN2gTSbvqkCHuWEkunZhZyKoVYYxm6mk";
     $("#images").empty();
     $("#images").show()
 
