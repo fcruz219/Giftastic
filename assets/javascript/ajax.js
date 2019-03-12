@@ -38,7 +38,7 @@ $(document).ready(function(){
 
 
 
-
+//On click of buttons to show gifs
 $(document).on("click", ".itembutton", displayInfo);
 function displayInfo() {
     var itemName = $(this).attr("data-name");
@@ -55,6 +55,7 @@ function displayInfo() {
 
         var results = response.data;
 
+        //creates gifs
         for (var i=0; i< results.length; i++) {
             var dataImage = $("<img>");
             dataImage.attr("src", results[i].images.fixed_height_still.url);
@@ -75,7 +76,7 @@ function displayInfo() {
         }
     })
 }
-
+//pauses and unpauses the gifs
 $("#images").on("click", ".gif", function() {
     var state = $(this).attr("data-state");
     if (state === "still"){
